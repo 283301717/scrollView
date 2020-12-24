@@ -1,0 +1,31 @@
+@mixin border($direction: null, $width: null, $style: null, $color: null) {
+	@if($direction == "top") {
+		border-top: $width $style $color;
+	} @else if($direction == "left") {
+		border-left: $width $style $color;
+	} @else if($direction == "right") {
+		border-right: $width $style $color;
+	} @else if($direction == "bottom") {
+		border-bottom: $width $style $color;
+	} @else {
+		border: $width $style $color;
+		/*
+	    border-width: $width;
+	    border-style: $style;
+	    border-color: $color;
+		 */
+	}
+}
+
+@mixin radius($num: null) {
+    -webkit-border-radius: $num;
+    -moz-border-radius: $num;
+    border-radius: $num;
+}
+
+@mixin box-sizing($box: null) {
+  box-sizing: $box;
+  -moz-box-sizing: $box;
+  -o-box-sizing: $box; 
+  -webkit-box-sizing: $box;
+}
